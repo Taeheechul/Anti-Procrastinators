@@ -1,0 +1,43 @@
+/*Accordion*/
+.title-task{
+   background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 30px;
+    margin: 25px;
+    width: 150px;
+    border: 3px solid blue;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+    font-family: cursive;
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+
+.Task{
+    padding: 0 18px;
+    display: block;
+    background-color: white;
+    width: 150px;
+    position: relative;
+    left: 310px;
+    top: 100px;
+    text-align: center;
+}
+
+.input{
+   position: absolute;
+     left: 280px;
+    top: 110px;
+    
+}
+#test{
+    
+    
+}
+ body{
+     background-image: url("http://helpdotnetvision.nevron.com/Framework/Images/Presentation/AppearanceStyles/Fillstyles/AdvancedGradientStyle/AdvancedGradientPicture.png");
+     background-repeat: no-repeat;
+ }
