@@ -1,5 +1,36 @@
 //accordion
 $(document).ready(function(){
+  
+  $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
+  $("body").append(a[0].content + "<p>— " + a[0].title + "</p>")
+});
+  
+  $("#button").click(function() {
+   
+   var input = $("#input").val();
+    console.log(input);
+
+    
+  if ($("#t1").text() === "") {
+    
+    $("#t1").append(input);
+    console.log($("#t1").text());
+    
+  } else if($("#t1").text() != "" && $("#t2").text() === ""){
+
+   $("#t2").append(input);
+    console.log($("#t2").text());
+    
+ } else if($("#t1").text() != "" && $("#t2").text() != "" && $("#t3").text() === ""){
+   
+    $("#t3").append(input);
+    console.log($("#t3").text());
+    
+ }
+    });
+    
+
+  
 $('.Task').hide();
 $('.title-task').click(function(){
     // console.log("wow");
@@ -7,6 +38,8 @@ $('.title-task').click(function(){
    
 });
 });
+
+  
 
 // google API
 
@@ -48,15 +81,13 @@ window.__gcse = {
 
   console.log(s);
   
-  
+
+
 })();
 
-$("#button").click(function() {
-  var input = $("#input").val();
-  console.log(input);
-  $("p").append(input);
-});
 
-
+localStorage.setItem('wow','okay');
+var test = localStorage.getItem('wow');
+console.log(test);
 
 

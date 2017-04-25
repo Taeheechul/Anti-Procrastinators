@@ -12,7 +12,7 @@
     text-align: center;
     font-family: cursive;
     position: relative;
-    left: 300px;
+    left: 250px;
     top: 100px;
 }
 
@@ -22,22 +22,25 @@
     background-color: white;
     width: 150px;
     position: relative;
-    left: 310px;
+    left: 250px;
     top: 100px;
     text-align: center;
+    margin: 23px;
 }
 
-.input{
-   position: absolute;
-     left: 280px;
-    top: 110px;
-    
+.box{
+    position: absolute;
+    height: 140px;
+    left: 230px;
+    botbottomm: 45450px;
 }
+    
+
 #test{
             
             position:  absolute;
             top : 200px;
-            left: 500px;
+            left: 50000px;
             width: 300px;
             height:300px;
             border:1px solid black;
@@ -48,8 +51,9 @@
      background-repeat: no-repeat;
      background-size:cover;
  }
+ 
  iframe{
      position: relative;
-     left:800px;
-     bottom:300px;
+     left:900px;
+     bottom:30000px;
  }
