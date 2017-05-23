@@ -1,47 +1,79 @@
 //accordion
 $(document).ready(function(){
   
-  $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
-  $("body").append(a[0].content + "<p>— " + a[0].title + "</p>")
-});
   
   $("#button").click(function() {
    
-   var input = $("#input").val();
+  var input = $("#input").val();
     console.log(input);
 
+
+//  if (sessionStorage.getItem("userInput")) {
+  
+//   $("#t1").append(data)= sessionStorage.getItem("userInput");
+//}
+//  sessionStorage.setItem("userInput", input);
     
-  if ($("#t1").text() === "") {
+ 
     
-    $("#t1").append(input);
+//    var data = sessionStorage.getItem("userInput");
+//    $("#t1").append(data);
+    
+    
+//On refresh, I want to load stored variables 
+
+     if ($("#t1").text() === "") {
+   $("#t1").append(input);
+   
     console.log($("#t1").text());
-    
+
   } else if($("#t1").text() != "" && $("#t2").text() === ""){
 
-   $("#t2").append(input);
+  $("#t2").append(input);
+  
     console.log($("#t2").text());
     
- } else if($("#t1").text() != "" && $("#t2").text() != "" && $("#t3").text() === ""){
+} else if($("#t1").text() != "" && $("#t2").text() != "" && $("#t3").text() === ""){
    
     $("#t3").append(input);
     console.log($("#t3").text());
     
- }
+    
+}
+
+
+$( "#button1" ).click(function() {
+  $( "#t1" ).empty();
+});
+
+$( "#button2" ).click(function() {
+  $( "#t2" ).empty();
+});
+
+$( "#button3" ).click(function() {
+  $( "#t3" ).empty();
+});
+
+
+
+$(".search").attr("webSearchQueryAddition","math");
     });
+    
     
 
   
 $('.Task').hide();
 $('.title-task').click(function(){
-    // console.log("wow");
-    $(this).next().slideDown();
-   
-});
+    $(this).next().slideToggle('slow');
+    
 });
 
-  
 
-// google API
+//else {
+    //document.getElementById("task").innerHTML = "Sorry, your browser does not support Web Storage...";
+//}
+
+
 
 var myCallback = function() {
   if (document.readyState == 'complete') {
@@ -71,7 +103,6 @@ window.__gcse = {
   parsetags: 'explicit',
   callback: myCallback
 };
-
 (function() {
   var cx = '016137450971275796276:raogc-nmava'; // Insert your own Custom Search engine ID here
   var gcse = document.createElement('script'); gcse.type = 'text/javascript';
@@ -80,14 +111,8 @@ window.__gcse = {
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
 
   console.log(s);
-  
 
 
-})();
+});
 
-
-localStorage.setItem('wow','okay');
-var test = localStorage.getItem('wow');
-console.log(test);
-
-
+});
